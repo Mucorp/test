@@ -1,0 +1,255 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.main-container {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    // border: 2px solid rgba(0, 0, 0, .4);
+    transition: 1s ease;
+    position: relative;
+}
+
+.sidebar {
+  width: 12.7%;
+  height: 100%;
+  background-color: white;
+  transition: 1s ease;
+  position: sticky; 
+  top: 0;
+  padding: 24px;
+}
+
+.main-content {
+  width: 87.3%;
+  height: 100%;
+  background-color: #F5F7FD;
+  transition: 1s ease;
+  padding: 24px;
+}
+
+.main-content_large {
+  width: 90%;
+}
+
+.sidebar_small {
+  width: 5%;
+}
+
+// User dropdown
+.user-dropdown{
+    .user-name{
+        flex-basis: 59%;
+        align-self: flex-end;
+        h4{
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            flex-basis: 100%;
+        }
+        small{
+            font-size: 13px;
+            line-height: 15.23px;
+            color: $mid-grey;
+        }
+
+    }
+    img{
+        width: 9px;
+        height: 5px;
+        align-self: center;
+    }
+}
+.user-icon{
+    background: $main-blue;
+    box-shadow: 0px 4px 4px rgba(59, 124, 182, 0.1);
+    border-radius: 13px;
+    padding: 10px;
+    display: flex;
+    margin-right: 13px;
+    img{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+// Counter Row
+
+.counter-card{
+    background-color: $white;
+    padding: 10px;
+    box-shadow: 0px 12px 4px rgba(226, 230, 242, 0.2);
+    border-radius: 12px;
+    margin-right: 24px;
+    
+    .invoice-duration{
+        font-size: 14px;
+        font-weight: 500;
+        padding-left: 5px;
+    }
+    .invoice-percentage{
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .invoice-positive {
+        color: $success;
+    }
+    .invoice-count{
+        padding-left: 6px;
+    }
+    .invoice-count, .invoice-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: $main-blue;
+    }
+    .invoice-elipsis{
+        width: 4px;
+        height: 4px;
+        background: #9EA8C7;
+        border-radius: 50%;
+        margin-inline: 10px;
+    }
+}
+
+
+// Invoice menu
+.invoice-menu{
+    .invoice-heading{
+        font-size: 32px;
+        font-weight: bold;
+        color: $dark-grey;
+        align-self: center;
+    }
+    .search{
+        input{
+            border: 0;
+            padding: 12px 40px 12px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 100%;
+            background: url('./assets/images/magnify.png' )
+             right center  / 18px 18px
+            no-repeat white ;
+            background-position: center right 15px;
+        }
+    }
+    .invoice-filter{
+        button{
+            width: 100%;
+            padding-left: 40px;
+            background: url('./assets/images/slider-icon.png' ) no-repeat white ;
+           background-position: center left 12px;
+           background-size: 20px 20px;
+           font-size: 14px;
+           color: $dark-grey;
+           padding-block: 10px;
+           border-radius: 8px;
+           transition: 0.5s ease;
+           &:hover{
+               background-color: $main-blue;
+               color: $white;
+           }
+
+           .filter-indicator {
+                position: absolute;
+                top: -6px;
+                right: -9px;
+                background: red;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                color: white;
+            }
+        }
+    }
+    .invoice-print{
+        button{
+            width: 100%;
+            padding-left: 40px;
+            background: url('./assets/images/printer-icon.png' ) no-repeat white ;
+           background-position: center left 12px;
+           background-size: 20px 20px;
+           font-size: 14px;
+           color: $dark-grey;
+           padding-block: 10px;
+           border-radius: 8px;
+           transition: 0.5s ease;
+           &:hover{
+               background-color: $main-blue;
+               color: $white;
+           }
+        }
+    }
+    .invoice-download{
+        button{
+            width: 100%;
+            padding-left: 40px;
+            background: url('./assets/images/download-icon.png' ) no-repeat white ;
+           background-position: center left 12px;
+           background-size: 20px 20px;
+           font-size: 14px;
+           color: $dark-grey;
+           padding-block: 10px;
+           border-radius: 8px;
+           transition: 0.5s ease;
+           &:hover{
+               background-color: $main-blue;
+               color: $white;
+           }
+        }
+    }
+    .invoice-create{
+        button{
+            width: 100%;
+            background: $main-blue;
+           font-size: 14px;
+           color: $white;
+           padding-block: 10px;
+           border-radius: 8px;
+           transition: 0.5s ease;
+           &:hover{
+               background-color: $main-blue;
+               color: $white;
+           }
+        }
+    }
+}
+
+
+
+// data table
+.table-wrapper{
+    background: white;
+    padding: 9px 22px;
+    border-radius: 8px;
+
+    table{
+        th{
+            color: $mid-grey;
+            font-size: 12px;
+            font-weight: 500;
+            border: none;
+            .table-heading {
+                margin-bottom: 30px;
+            }
+        }
+        td{
+            font-size: 14px;
+            color: $dark-grey;
+        }
+    }
+
+    .table-options{
+        button{
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+

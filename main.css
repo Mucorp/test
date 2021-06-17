@@ -1,0 +1,358 @@
+/**
+ * Set up a decent box model on the root element
+ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: #838BA7;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: #222222;
+  font: normal 125%/1.4 "Roboto", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: 1180px;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.logo a {
+  max-width: 89px;
+  display: block;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+.side-menu ul li {
+  margin: 5px 0;
+}
+.side-menu ul li img {
+  max-width: 16px;
+  margin-right: 13px;
+}
+.side-menu ul li a {
+  padding: 10px;
+  font-size: 15px;
+  color: #838BA7;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+}
+.side-menu ul li:hover {
+  background-color: #f3f5fa;
+  border-radius: 8px;
+}
+.side-menu ul li:hover a {
+  color: #000;
+}
+.side-menu ul li.active {
+  background-color: #f3f5fa;
+  border-radius: 8px;
+}
+.side-menu ul li.active a {
+  color: #000;
+}
+
+.main-container {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  transition: 1s ease;
+  position: relative;
+}
+
+.sidebar {
+  width: 12.7%;
+  height: 100%;
+  background-color: white;
+  transition: 1s ease;
+  position: sticky;
+  top: 0;
+  padding: 24px;
+}
+
+.main-content {
+  width: 87.3%;
+  height: 100%;
+  background-color: #F5F7FD;
+  transition: 1s ease;
+  padding: 24px;
+}
+
+.main-content_large {
+  width: 90%;
+}
+
+.sidebar_small {
+  width: 5%;
+}
+
+.user-dropdown .user-name {
+  flex-basis: 59%;
+  align-self: flex-end;
+}
+.user-dropdown .user-name h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  flex-basis: 100%;
+}
+.user-dropdown .user-name small {
+  font-size: 13px;
+  line-height: 15.23px;
+  color: #8888AC;
+}
+.user-dropdown img {
+  width: 9px;
+  height: 5px;
+  align-self: center;
+}
+
+.user-icon {
+  background: #0C39DA;
+  box-shadow: 0px 4px 4px rgba(59, 124, 182, 0.1);
+  border-radius: 13px;
+  padding: 10px;
+  display: flex;
+  margin-right: 13px;
+}
+.user-icon img {
+  height: 20px;
+  width: 20px;
+}
+
+.counter-card {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0px 12px 4px rgba(226, 230, 242, 0.2);
+  border-radius: 12px;
+  margin-right: 24px;
+}
+.counter-card .invoice-duration {
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 5px;
+}
+.counter-card .invoice-percentage {
+  font-weight: bold;
+  font-size: 16px;
+}
+.counter-card .invoice-positive {
+  color: #15B2AC;
+}
+.counter-card .invoice-count {
+  padding-left: 6px;
+}
+.counter-card .invoice-count, .counter-card .invoice-price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0C39DA;
+}
+.counter-card .invoice-elipsis {
+  width: 4px;
+  height: 4px;
+  background: #9EA8C7;
+  border-radius: 50%;
+  margin-inline: 10px;
+}
+
+.invoice-menu .invoice-heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1F1F41;
+  align-self: center;
+}
+.invoice-menu .search input {
+  border: 0;
+  padding: 12px 40px 12px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  background: url("./assets/images/magnify.png") right center/18px 18px no-repeat white;
+  background-position: center right 15px;
+}
+.invoice-menu .invoice-filter button {
+  width: 100%;
+  padding-left: 40px;
+  background: url("./assets/images/slider-icon.png") no-repeat white;
+  background-position: center left 12px;
+  background-size: 20px 20px;
+  font-size: 14px;
+  color: #1F1F41;
+  padding-block: 10px;
+  border-radius: 8px;
+  transition: 0.5s ease;
+}
+.invoice-menu .invoice-filter button:hover {
+  background-color: #0C39DA;
+  color: #fff;
+}
+.invoice-menu .invoice-filter button .filter-indicator {
+  position: absolute;
+  top: -6px;
+  right: -9px;
+  background: red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.invoice-menu .invoice-print button {
+  width: 100%;
+  padding-left: 40px;
+  background: url("./assets/images/printer-icon.png") no-repeat white;
+  background-position: center left 12px;
+  background-size: 20px 20px;
+  font-size: 14px;
+  color: #1F1F41;
+  padding-block: 10px;
+  border-radius: 8px;
+  transition: 0.5s ease;
+}
+.invoice-menu .invoice-print button:hover {
+  background-color: #0C39DA;
+  color: #fff;
+}
+.invoice-menu .invoice-download button {
+  width: 100%;
+  padding-left: 40px;
+  background: url("./assets/images/download-icon.png") no-repeat white;
+  background-position: center left 12px;
+  background-size: 20px 20px;
+  font-size: 14px;
+  color: #1F1F41;
+  padding-block: 10px;
+  border-radius: 8px;
+  transition: 0.5s ease;
+}
+.invoice-menu .invoice-download button:hover {
+  background-color: #0C39DA;
+  color: #fff;
+}
+.invoice-menu .invoice-create button {
+  width: 100%;
+  background: #0C39DA;
+  font-size: 14px;
+  color: #fff;
+  padding-block: 10px;
+  border-radius: 8px;
+  transition: 0.5s ease;
+}
+.invoice-menu .invoice-create button:hover {
+  background-color: #0C39DA;
+  color: #fff;
+}
+
+.table-wrapper {
+  background: white;
+  padding: 9px 22px;
+  border-radius: 8px;
+}
+.table-wrapper table th {
+  color: #8888AC;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+}
+.table-wrapper table th .table-heading {
+  margin-bottom: 30px;
+}
+.table-wrapper table td {
+  font-size: 14px;
+  color: #1F1F41;
+}
+.table-wrapper .table-options button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+.table-wrapper .table-options button img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=main.css.map */
