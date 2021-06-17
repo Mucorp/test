@@ -241,10 +241,12 @@
         td{
             font-size: 14px;
             color: $dark-grey;
+            border: none;
         }
     }
 
     .table-options{
+        margin-bottom: 25px;
         button{
             width: 20px;
             height: 20px;

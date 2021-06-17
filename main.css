@@ -356,6 +356,10 @@ body {
 .table-wrapper table td {
   font-size: 14px;
   color: #1F1F41;
+  border: none;
+}
+.table-wrapper .table-options {
+  margin-bottom: 25px;
 }
 .table-wrapper .table-options button {
   width: 20px;
