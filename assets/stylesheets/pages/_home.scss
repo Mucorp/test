@@ -251,6 +251,7 @@
 
     .table-options{
         margin-bottom: 25px;
+        max-width: 175px;
         button{
             width: 20px;
             height: 20px;
@@ -315,4 +316,32 @@ label{
     top: -12px;
     right: 509px;
 }
+
+
+//pagination
+
+.page-selector {
+    font-size: 14px;
+    select{
+        background: white;
+        border: none;
+        border-radius: 8px;
+        padding: 8px;
+        margin-right: 12px;
+    }
+}
+
+.page-link {
+    border-radius: 8px;
+    margin-right: 5px;
+    padding: 1px 9px;
+    border: none;
+    color: #000;
+    font-size: 14px;
+}
+.activated{
+    background-color: $main-blue;
+    color: white;
+}
+
 

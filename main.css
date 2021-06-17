@@ -370,6 +370,7 @@ body {
 }
 .table-wrapper .table-options {
   margin-bottom: 25px;
+  max-width: 175px;
 }
 .table-wrapper .table-options button {
   width: 20px;
@@ -429,6 +430,31 @@ body {
   position: absolute;
   top: -12px;
   right: 509px;
+}
+
+.page-selector {
+  font-size: 14px;
+}
+.page-selector select {
+  background: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  margin-right: 12px;
+}
+
+.page-link {
+  border-radius: 8px;
+  margin-right: 5px;
+  padding: 1px 9px;
+  border: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.activated {
+  background-color: #0C39DA;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
