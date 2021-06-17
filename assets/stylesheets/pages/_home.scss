@@ -251,5 +251,20 @@
             }
         }
     }
+
+    .pending{
+        background: #fff5e9;
+    color: #EF8407;
+    padding: 3px 8px;
+    border-radius: 40px;
+    font-size: 14px;
+    }
+    .past-due{
+    background: #fcebeb;
+    color: $danger;
+    padding: 3px 8px;
+    border-radius: 40px;
+    font-size: 14px;
+    }
 }
 

@@ -354,5 +354,19 @@ body {
   max-width: 100%;
   height: auto;
 }
+.table-wrapper .pending {
+  background: #fff5e9;
+  color: #EF8407;
+  padding: 3px 8px;
+  border-radius: 40px;
+  font-size: 14px;
+}
+.table-wrapper .past-due {
+  background: #fcebeb;
+  color: #E53535;
+  padding: 3px 8px;
+  border-radius: 40px;
+  font-size: 14px;
+}
 
 /*# sourceMappingURL=main.css.map */
