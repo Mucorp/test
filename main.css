@@ -146,7 +146,7 @@ body {
 }
 
 .sidebar {
-  width: 12.7%;
+  width: 236px;
   height: 100%;
   background-color: white;
   transition: 1s ease;
@@ -156,7 +156,7 @@ body {
 }
 
 .main-content {
-  width: 87.3%;
+  width: calc(100% - 236px);
   height: 100%;
   background-color: #F5F7FD;
   transition: 1s ease;
@@ -255,6 +255,9 @@ body {
   background: url("./assets/images/magnify.png") right center/18px 18px no-repeat white;
   background-position: center right 15px;
 }
+.invoice-menu .invoice-filter {
+  max-width: 150px;
+}
 .invoice-menu .invoice-filter button {
   width: 100%;
   padding-left: 40px;
@@ -281,6 +284,9 @@ body {
   height: 20px;
   color: white;
 }
+.invoice-menu .invoice-print {
+  max-width: 150px;
+}
 .invoice-menu .invoice-print button {
   width: 100%;
   padding-left: 40px;
@@ -297,6 +303,9 @@ body {
   background-color: #0C39DA;
   color: #fff;
 }
+.invoice-menu .invoice-download {
+  max-width: 150px;
+}
 .invoice-menu .invoice-download button {
   width: 100%;
   padding-left: 40px;
@@ -312,6 +321,9 @@ body {
 .invoice-menu .invoice-download button:hover {
   background-color: #0C39DA;
   color: #fff;
+}
+.invoice-menu .invoice-create {
+  max-width: 150px;
 }
 .invoice-menu .invoice-create button {
   width: 100%;

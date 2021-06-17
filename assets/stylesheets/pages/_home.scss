@@ -12,7 +12,7 @@
 }
 
 .sidebar {
-  width: 12.7%;
+  width: 236px;
   height: 100%;
   background-color: white;
   transition: 1s ease;
@@ -22,7 +22,7 @@
 }
 
 .main-content {
-  width: 87.3%;
+  width: calc(100% - 236px);
   height: 100%;
   background-color: #F5F7FD;
   transition: 1s ease;
@@ -135,6 +135,7 @@
         }
     }
     .invoice-filter{
+        max-width: 150px;
         button{
             width: 100%;
             padding-left: 40px;
@@ -164,6 +165,7 @@
         }
     }
     .invoice-print{
+        max-width: 150px;
         button{
             width: 100%;
             padding-left: 40px;
@@ -182,6 +184,7 @@
         }
     }
     .invoice-download{
+        max-width: 150px;
         button{
             width: 100%;
             padding-left: 40px;
@@ -200,6 +203,7 @@
         }
     }
     .invoice-create{
+        max-width: 150px;
         button{
             width: 100%;
             background: $main-blue;
