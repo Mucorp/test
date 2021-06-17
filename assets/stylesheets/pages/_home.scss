@@ -283,6 +283,10 @@ border: 2px solid blue;
 border-radius: 12px;
 margin-top: 10px;
 position: relative;
+
+label{
+    font-size: 14px;
+}
 }
 .filter-menu::before {
     content: "";

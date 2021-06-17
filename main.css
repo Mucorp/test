@@ -393,6 +393,9 @@ body {
   margin-top: 10px;
   position: relative;
 }
+.filter-menu label {
+  font-size: 14px;
+}
 
 .filter-menu::before {
   content: "";
