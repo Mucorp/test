@@ -102,6 +102,16 @@ body {
   display: block;
 }
 
+.btn-primary {
+  background-color: #0C39DA;
+}
+
+.btn-check:focus + .btn, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px #0C39DA;
+  color: #0C39DA;
+}
+
 .side-menu ul {
   list-style: none;
   padding: 0;
@@ -270,9 +280,9 @@ body {
   border-radius: 8px;
   transition: 0.5s ease;
 }
-.invoice-menu .invoice-filter button:hover {
-  background-color: #0C39DA;
-  color: #fff;
+.invoice-menu .invoice-filter button:focus {
+  color: #0C39DA;
+  font-weight: 600;
 }
 .invoice-menu .invoice-filter button .filter-indicator {
   position: absolute;
@@ -392,9 +402,20 @@ body {
   border-radius: 12px;
   margin-top: 10px;
   position: relative;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 .filter-menu label {
   font-size: 14px;
+}
+
+.collapsed {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  height: 0;
+  display: none;
 }
 
 .filter-menu::before {

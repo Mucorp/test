@@ -122,7 +122,7 @@
                         <div class="col-lg-9">
                             <div class="row justify-content-end">
                                 <div class="search col-lg-3 d-flex align-items-center"><input type="search" name="" id="" placeholder="Search"></div>
-                                <div class="invoice-filter col d-flex align-items-center"><button class="btn position-relative">Filter<span class="filter-indicator">3</span></button></div>
+                                <div class="invoice-filter col d-flex align-items-center"><button class="btn position-relative" id="filter-btn">Filter<span class="filter-indicator">3</span></button></div>
                                 <div class="invoice-print col d-flex align-items-center"><button class="btn">Print</button></div>
                                 <div class="invoice-download col d-flex align-items-center"><button class="btn">Download</button></div>
                                 <div class="invoice-create col d-flex align-items-center"><button class="btn">Create Invoice</button></div>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="filter-menu">
+                            <div class="filter-menu collapsed">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-3 mb-4">
@@ -237,6 +237,14 @@
                                         <div class="col-3 mb-4">
                                             <label for="sent" class="form-label">Business ID</label>
                                             <input type="text" name="" id="" placeholder="Business ID" class="form-control">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 text-end">
+                                            <button class="btn btn-primary">
+                                                Apply Filters
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -550,7 +558,10 @@
     $(this).popover("hide");
 });
 
-
+$('#filter-btn').on('click', function(e) {
+      $('.filter-menu').toggleClass("collapsed"); //you can list several class names 
+      e.preventDefault();
+    });
 });
     </script>
 </body>

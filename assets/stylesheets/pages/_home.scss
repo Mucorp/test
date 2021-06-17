@@ -148,8 +148,12 @@
            border-radius: 8px;
            transition: 0.5s ease;
            &:hover{
-               background-color: $main-blue;
-               color: $white;
+            //    background-color: $main-blue;
+            //    color: $white;
+           }
+           &:focus{
+               color: $main-blue;
+               font-weight: 600;
            }
 
            .filter-indicator {
@@ -283,10 +287,21 @@ border: 2px solid blue;
 border-radius: 12px;
 margin-top: 10px;
 position: relative;
+visibility: visible;
+opacity: 1;
+transition: all .3s ease;
 
 label{
     font-size: 14px;
 }
+}
+
+.collapsed{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    height: 0;
+    display: none;
 }
 .filter-menu::before {
     content: "";
