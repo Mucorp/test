@@ -10,21 +10,42 @@
 </head>
 <body>
     <main class="main-container">
-        <aside class="sidebar">
-            <div class="logo d-flex justify-content-center">
+        <div class="hamburger_wrapper ms-3"><div class="hamburger_icon"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span></div></div>
+        <nav class="mobile-nav">
+            <div class="logo">
                 <a href=""><img src="./assets/images/Logo.png" alt="" class="img-fluid"></a>
             </div>
-            <div class="side-menu">
-                <ul>
-                    <li class="active"><a href=""><img src="./assets/images/invoices-icon.png" alt=""><span>Invoices</span></a></li>
-                    <li><a href=""><img src="./assets/images/reports-icon.png" alt=""><span>Reports</span></a></li>
-                    <li><a href=""><img src="./assets/images/bank-icon.png" alt=""><span>Banking</span></a></li>
-                </ul>
+        </nav>
+        <aside class="sidebar-all">
+            <div class="backdrop"></div>
+            <div class="sidebar">
+                <div class="logo d-xl-flex d-none justify-content-center">
+                    <a href=""><img src="./assets/images/Logo.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="user-dropdown d-xl-none d-flex">
+                    <a href="" class="user-icon"><img src="./assets/images/User.png" alt=""></a>
+                    <div class="user-name d-flex flex-wrap">
+                        <h4>Rodrigo do Carmo</h4>
+                        <small>Finances</small>
+                    </div>
+                    <img src="./assets/images/dropdown-icon.png" alt="">
+                </div>
+                <div class="side-menu">
+                    <ul>
+                        <li class="active"><a href=""><img src="./assets/images/invoices-icon.png" alt=""><span>Invoices</span></a></li>
+                        <li><a href=""><img src="./assets/images/reports-icon.png" alt=""><span>Reports</span></a></li>
+                        <li><a href=""><img src="./assets/images/bank-icon.png" alt=""><span>Banking</span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="sidebar-mobile">
+
             </div>
         </aside>
         <div class="main-content">
             <div class="d-flex justify-content-end mb-4">
-                <div class="user-dropdown d-flex">
+                <div class="user-dropdown d-xl-flex d-none">
                     <a href="" class="user-icon"><img src="./assets/images/User.png" alt=""></a>
                     <div class="user-name d-flex flex-wrap">
                         <h4>Rodrigo do Carmo</h4>

@@ -32,3 +32,30 @@
   }
 }
 
+
+
+
+
+
+// Responsive Mixins
+
+@mixin phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin phone-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin tablet-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin desktop-down {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin hd-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
