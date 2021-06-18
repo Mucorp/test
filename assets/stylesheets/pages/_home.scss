@@ -21,6 +21,9 @@
       width: 100%;
       margin-top: 50px;
   }
+  @include mobile{
+      padding: 16px;
+  }
 }
 
 .main-content_large {
@@ -73,6 +76,10 @@
     box-shadow: 0px 12px 4px rgba(226, 230, 242, 0.2);
     border-radius: 12px;
     margin-right: 24px;
+    @include desktop-down{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
     
     .invoice-duration{
         font-size: 14px;
@@ -111,6 +118,9 @@
         font-weight: bold;
         color: $dark-grey;
         align-self: center;
+        @include desktop-md-down{
+            font-size: 22px;
+        }
     }
     .search{
         input{
@@ -138,6 +148,16 @@
            padding-block: 10px;
            border-radius: 8px;
            transition: 0.5s ease;
+           @include web-down{
+               padding: 0;
+               background: white;
+               width: unset;
+               img{
+                   height: 20px;
+                   width: 20px;
+                   margin: 10px;
+               }
+           }
            &:hover{
             //    background-color: $main-blue;
             //    color: $white;
@@ -172,6 +192,16 @@
            padding-block: 10px;
            border-radius: 8px;
            transition: 0.5s ease;
+           @include web-down{
+            padding: 0;
+            background: white;
+            width: unset;
+            img{
+                height: 20px;
+                width: 20px;
+                margin: 10px;
+            }
+        }
            &:hover{
                background-color: $main-blue;
                color: $white;
@@ -191,6 +221,16 @@
            padding-block: 10px;
            border-radius: 8px;
            transition: 0.5s ease;
+           @include web-down{
+            padding: 0;
+            background: white;
+            width: unset;
+            img{
+                height: 20px;
+                width: 20px;
+                margin: 10px;
+            }
+        }
            &:hover{
                background-color: $main-blue;
                color: $white;
@@ -336,3 +376,36 @@ label{
 }
 
 
+.mobile-table {
+    padding: 16px 12px;
+    background: white;
+    border-radius: 8px;
+    
+    .mobile-table-actions{
+        img{
+            width: 18px;
+            height: 18px;
+        }
+        .btn{
+            padding: 0;
+        }
+    }
+    .mobile-table-detail{
+        font-size: 14px;
+    }
+    .pending{
+        background: #fff5e9;
+        color: #EF8407;
+        font-size: 14px;
+        border-radius: 40px;
+        display: inline;
+        margin-left: auto;
+        padding: 3px 8px;
+    }
+    .mobile-table-heading{
+        font-size: 13px;
+        color: $mid-grey;
+        display: flex;
+        align-items: center;
+    }
+}

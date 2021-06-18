@@ -10,7 +10,7 @@
 </head>
 <body>
     <main class="main-container">
-        <div class="burger_wrapper ms-3"><div class="burger_icon"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span></div></div>
+        <div class="burger_wrapper ms-3"><div id="burger-btn" class="burger_icon"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span></div></div>
         <nav class="mobile-nav">
             <div class="logo">
                 <a href=""><img src="./assets/images/Logo.png" alt="" class="img-fluid"></a>
@@ -39,9 +39,6 @@
                 </div>
 
             </div>
-            <div class="sidebar-mobile">
-
-            </div>
         </aside>
         <div class="main-content">
             <div class="d-flex justify-content-end mb-4">
@@ -55,9 +52,9 @@
                 </div>
             </div>
             <section class="invoices-counter">
-                <div class="container-fluid mb-4">
+                <div class="container-fluid mb-4 p-0">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <div class="counter-card">
                                 <div class="row">
                                     <div class="col-8"><span class="invoice-duration">This Week</span></div>
@@ -74,7 +71,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <div class="counter-card">
                                 <div class="row">
                                     <div class="col-8"><span class="invoice-duration">This Week</span></div>
@@ -91,7 +88,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <div class="counter-card">
                                 <div class="row">
                                     <div class="col-8"><span class="invoice-duration">This Week</span></div>
@@ -108,7 +105,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 col-6">
                             <div class="counter-card me-0">
                                 <div class="row">
                                     <div class="col-8"><span class="invoice-duration">This Week</span></div>
@@ -129,26 +126,27 @@
                 </div>
             </section>
             <section class="dashboard mb-4">
-                <div class="row">
-                    <div class="col-12">
-                        <img src="./assets/images/dashboard.png" alt="" class="img-fluid">
-
+                <div class="container-fluid p-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="./assets/images/dashboard.png" alt="" class="img-fluid">
+    
+                        </div>
                     </div>
                 </div>
             </section>
+
             <section class="invoice-menu mb-4">
-                <div class="container-fluid">
+                <div class="container-fluid p-0">
                     <div class="row">
-                        <div class="invoice-heading col-lg-3 col-12">Invoices</div>
-                        <div class="col-lg-9">
-                            <div class="row justify-content-end">
-                                <div class="search col-lg-3 d-flex align-items-center"><input type="search" name="" id="" placeholder="Search"></div>
-                                <div class="invoice-filter col d-flex align-items-center"><button class="btn position-relative" id="filter-btn">Filter<span class="filter-indicator">3</span></button></div>
-                                <div class="invoice-print col d-flex align-items-center"><button class="btn">Print</button></div>
-                                <div class="invoice-download col d-flex align-items-center"><button class="btn">Download</button></div>
-                                <div class="invoice-create col d-flex align-items-center"><button class="btn">Create Invoice</button></div>
-                            </div>
-                        </div>
+                        <div class="invoice-heading col-md-2 col-6 mb-3 mb-md-0">Invoices</div>
+                        <div class="search col-md-3 col-6 d-flex align-items-center order-2 order-md-1 pr-0 ms-auto"><input type="search" name="" id="" placeholder="Search"></div>
+                        <div class="invoice-filter col-md-1 col-lg-2 col-2 d-flex align-items-center order-3 order-md-2"><button class="btn position-relative" id="filter-btn"><span class="d-none d-lg-inline">Filter</span><img src="./assets/images/slider-icon.png" alt="" class="d-lg-none d-inline"><span class="filter-indicator">3</span></button></div>
+                        <div class="invoice-print col-md-1 col-lg-2 col-2 d-flex align-items-center order-4 order-md-3"><button class="btn"><span class="d-none d-lg-inline">Print</span><img src="./assets/images/printer-icon.png" alt="" class="d-lg-none d-inline"></button></div>
+                        <div class="invoice-download col-md-1 col-lg-2 col-2 d-flex align-items-center order-5 order-md-4"><button class="btn"><span class="d-none d-lg-inline">Download</span><img src="./assets/images/download-icon.png" alt="" class="d-lg-none d-inline"></button></div>
+                        <div class="invoice-create col-md-3 col-lg-2 col-6 d-flex align-items-center order-1 order-md-5  mb-3 mb-md-0 ms-auto ms-md-0"><button class="btn"><span>Create Invoice</span></button></div>
+                            
+                        
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
@@ -278,7 +276,7 @@
 
                         
             <section class="invoice-table">
-                <div class="table-wrapper table-responsive">
+                <div class="table-wrapper table-responsive d-none d-md-block">
                     <table class="table">
                         <thead>
                             <tr>
@@ -534,6 +532,71 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="row mt-2">
+                        <div class="col-2">
+                            <div class="page-selector d-flex align-items-center">
+                                <select name="" id="">
+                                    <option selected>1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                </select>
+                                <div class="results-per-page">
+                                    Results per page
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <nav aria-label="Page navigation example" class="justify-content-center d-flex">
+                                <ul class="pagination">
+                                  <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                      <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                  </li>
+                                  <li class="page-item"><a class="page-link activated" href="#">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                      <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </nav>
+                            </div>
+                    </div>
+                </div>
+                <div class="mobile-table d-block d-md-none">
+                    <div class="container-fluid p-0">
+                        <div class="row mb-4">
+                            <div class="col-1"><input type="checkbox" name="" id=""></div>
+                            <div class="col-3 mobile-table-heading"><span>Invoices</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"><input type="checkbox" name="" id=""></div>
+                            <div class="col-6 pe-0">
+                                <div class="d-flex flex-column mobile-table-detail">
+                                    <div class="fw-bold">#1. Disney</div>
+                                    <div class="">$ 110.25</div>
+                                    <div class=""><span class="fw-bold">Due Date</span>02/03/2021</div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="d-flex flex-column">
+                                    <div class="pending">Pending</div>
+                                    <div class="mobile-table-actions ms-auto">
+                                        <button class="unlike btn"><img src="./assets/images/unlike-table.png" alt=""></button>
+                                        <button class="shareable-link btn" ><img src="./assets/images/link-table.png" alt=""></button>
+                                        <button class="edit-invoice btn"><img src="./assets/images/edit-table.png" alt=""></button>
+                                        <button class="delete-invoice btn"><img src="./assets/images/trash-table.png" alt=""></button> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-2">
@@ -570,7 +633,7 @@
                             </ul>
                           </nav>
                         </div>
-                    </div>
+                </div>
 
             </section>
         </div>
@@ -601,7 +664,9 @@
         e.preventDefault();
         });
     $('#burger-btn').on('click', function(e) {
-        $('.filter-menu').toggleClass("collapsed"); //you can list several class names 
+        $('.burger_wrapper').toggleClass("open"); //you can list several class names 
+        $('.backdrop').toggleClass("open"); //you can list several class names 
+        $('.sidebar').toggleClass("open"); //you can list several class names 
         e.preventDefault();
         });
 });

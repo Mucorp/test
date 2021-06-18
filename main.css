@@ -121,7 +121,7 @@ body {
   padding: 14px 8px;
   border: 2px solid #fff;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
   left: 5px;
 }
 @media (min-width: 1200px) {
@@ -190,13 +190,58 @@ body {
   width: 50%;
 }
 
+.burger_wrapper.open .burger_icon span:nth-child(1) {
+  left: 2px;
+  top: 6px;
+}
+
+.burger_wrapper.open .burger_icon span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: 5px;
+}
+
+.burger_wrapper.open .burger_icon span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.burger_wrapper.open .burger_icon span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+.burger_wrapper.open .burger_icon span:nth-child(5) {
+  left: 3px;
+  top: 15px;
+}
+
+.burger_wrapper.open .burger_icon span:nth-child(6) {
+  left: calc(50% - 3px);
+  top: 15px;
+  width: 50%;
+}
+
+.burger_wrapper.open .burger_icon span:nth-child(1), .burger_wrapper.open .burger_icon span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.burger_wrapper.open .burger_icon span:nth-child(2), .burger_wrapper.open .burger_icon span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
 .sidebar {
+  padding: 24px;
   width: 255px;
   height: 100%;
   background-color: white;
-  transition: 1s ease;
+  transition: 0.5s ease;
   top: 0;
-  padding: 24px;
   position: fixed;
   z-index: 9;
   padding-top: 70px;
@@ -204,6 +249,7 @@ body {
 }
 @media (min-width: 1200px) {
   .sidebar {
+    padding: 24px;
     width: 236px;
     position: sticky;
     display: block;
@@ -216,10 +262,21 @@ body {
 
 .backdrop {
   background: #000;
-  opacity: 0.6;
+  opacity: 0.7;
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: 9;
+  display: none;
+  transition: 0.5s ease;
+}
+.backdrop.open {
+  display: block;
+}
+@media (min-width: 1200px) {
+  .backdrop {
+    display: none !important;
+  }
 }
 
 .side-menu ul {
@@ -295,6 +352,11 @@ body {
     margin-top: 50px;
   }
 }
+@media (max-width: 599px) {
+  .main-content {
+    padding: 16px;
+  }
+}
 
 .main-content_large {
   width: 90%;
@@ -341,6 +403,12 @@ body {
   border-radius: 12px;
   margin-right: 24px;
 }
+@media (max-width: 1200px) {
+  .counter-card {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
 .counter-card .invoice-duration {
   font-size: 14px;
   font-weight: 500;
@@ -375,6 +443,11 @@ body {
   color: #1F1F41;
   align-self: center;
 }
+@media (max-width: 1200px) {
+  .invoice-menu .invoice-heading {
+    font-size: 22px;
+  }
+}
 .invoice-menu .search input {
   border: 0;
   padding: 12px 40px 12px 12px;
@@ -398,6 +471,18 @@ body {
   padding-block: 10px;
   border-radius: 8px;
   transition: 0.5s ease;
+}
+@media (max-width: 1000px) {
+  .invoice-menu .invoice-filter button {
+    padding: 0;
+    background: white;
+    width: unset;
+  }
+  .invoice-menu .invoice-filter button img {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+  }
 }
 .invoice-menu .invoice-filter button:focus {
   color: #0C39DA;
@@ -428,6 +513,18 @@ body {
   border-radius: 8px;
   transition: 0.5s ease;
 }
+@media (max-width: 1000px) {
+  .invoice-menu .invoice-print button {
+    padding: 0;
+    background: white;
+    width: unset;
+  }
+  .invoice-menu .invoice-print button img {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+  }
+}
 .invoice-menu .invoice-print button:hover {
   background-color: #0C39DA;
   color: #fff;
@@ -446,6 +543,18 @@ body {
   padding-block: 10px;
   border-radius: 8px;
   transition: 0.5s ease;
+}
+@media (max-width: 1000px) {
+  .invoice-menu .invoice-download button {
+    padding: 0;
+    background: white;
+    width: unset;
+  }
+  .invoice-menu .invoice-download button img {
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+  }
 }
 .invoice-menu .invoice-download button:hover {
   background-color: #0C39DA;
@@ -574,6 +683,37 @@ body {
 .activated {
   background-color: #0C39DA;
   color: white;
+}
+
+.mobile-table {
+  padding: 16px 12px;
+  background: white;
+  border-radius: 8px;
+}
+.mobile-table .mobile-table-actions img {
+  width: 18px;
+  height: 18px;
+}
+.mobile-table .mobile-table-actions .btn {
+  padding: 0;
+}
+.mobile-table .mobile-table-detail {
+  font-size: 14px;
+}
+.mobile-table .pending {
+  background: #fff5e9;
+  color: #EF8407;
+  font-size: 14px;
+  border-radius: 40px;
+  display: inline;
+  margin-left: auto;
+  padding: 3px 8px;
+}
+.mobile-table .mobile-table-heading {
+  font-size: 13px;
+  color: #8888AC;
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

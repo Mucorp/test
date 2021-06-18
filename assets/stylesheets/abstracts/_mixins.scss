@@ -39,19 +39,28 @@
 
 // Responsive Mixins
 
-@mixin phone-only {
+@mixin mobile {
   @media (max-width: 599px) { @content; }
 }
-@mixin phone-up {
+@mixin moile-up {
   @media (min-width: 600px) { @content; }
 }
 @mixin tablet-up {
   @media (min-width: 900px) { @content; }
 }
+@mixin tablet-down {
+  @media (max-width: 900px) { @content; }
+}
+@mixin web-down {
+  @media (max-width: 1000px) { @content; }
+}
 @mixin desktop-up {
   @media (min-width: 1200px) { @content; }
 }
 @mixin desktop-down {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin desktop-md-down {
   @media (max-width: 1200px) { @content; }
 }
 @mixin hd-up {
