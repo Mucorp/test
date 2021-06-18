@@ -360,7 +360,14 @@ label{
         padding: 8px;
         margin-right: 12px;
     }
+    &.mobile{
+        select{
+            width: 37px;
+            font-size: 12px;
+        }
+    }
 }
+
 
 .page-link {
     border-radius: 8px;
@@ -408,4 +415,7 @@ label{
         display: flex;
         align-items: center;
     }
+}
+.results-per-page-mobile{
+    font-size: 11px;
 }

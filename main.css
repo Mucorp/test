@@ -670,6 +670,10 @@ body {
   padding: 8px;
   margin-right: 12px;
 }
+.page-selector.mobile select {
+  width: 37px;
+  font-size: 12px;
+}
 
 .page-link {
   border-radius: 8px;
@@ -714,6 +718,10 @@ body {
   color: #8888AC;
   display: flex;
   align-items: center;
+}
+
+.results-per-page-mobile {
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=main.css.map */
