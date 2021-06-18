@@ -202,10 +202,10 @@
                 margin: 10px;
             }
         }
-           &:hover{
-               background-color: $main-blue;
-               color: $white;
-           }
+        &:focus{
+            color: $main-blue;
+            font-weight: 600;
+        }
         }
     }
     .invoice-download{
@@ -231,10 +231,10 @@
                 margin: 10px;
             }
         }
-           &:hover{
-               background-color: $main-blue;
-               color: $white;
-           }
+        &:focus{
+            color: $main-blue;
+            font-weight: 600;
+        }
         }
     }
     .invoice-create{
@@ -247,10 +247,10 @@
            padding-block: 10px;
            border-radius: 8px;
            transition: 0.5s ease;
-           &:hover{
-               background-color: $main-blue;
-               color: $white;
-           }
+           &:focus{
+            color: $main-blue;
+            font-weight: 600;
+        }
         }
     }
 }
@@ -346,6 +346,10 @@ label{
     position: absolute;
     top: -12px;
     right: 509px;
+    @include web-down{
+      display: none;
+    }
+
 }
 
 

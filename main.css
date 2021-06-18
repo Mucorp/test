@@ -525,9 +525,9 @@ body {
     margin: 10px;
   }
 }
-.invoice-menu .invoice-print button:hover {
-  background-color: #0C39DA;
-  color: #fff;
+.invoice-menu .invoice-print button:focus {
+  color: #0C39DA;
+  font-weight: 600;
 }
 .invoice-menu .invoice-download {
   max-width: 150px;
@@ -556,9 +556,9 @@ body {
     margin: 10px;
   }
 }
-.invoice-menu .invoice-download button:hover {
-  background-color: #0C39DA;
-  color: #fff;
+.invoice-menu .invoice-download button:focus {
+  color: #0C39DA;
+  font-weight: 600;
 }
 .invoice-menu .invoice-create {
   max-width: 150px;
@@ -572,9 +572,9 @@ body {
   border-radius: 8px;
   transition: 0.5s ease;
 }
-.invoice-menu .invoice-create button:hover {
-  background-color: #0C39DA;
-  color: #fff;
+.invoice-menu .invoice-create button:focus {
+  color: #0C39DA;
+  font-weight: 600;
 }
 
 .table-wrapper {
@@ -658,6 +658,11 @@ body {
   position: absolute;
   top: -12px;
   right: 509px;
+}
+@media (max-width: 1000px) {
+  .filter-menu::before {
+    display: none;
+  }
 }
 
 .page-selector {
