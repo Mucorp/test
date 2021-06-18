@@ -20,9 +20,9 @@
     color: $main-blue;
 }
 
-// nav hamburger button 
+// nav burger button 
 
-.hamburger_wrapper {
+.burger_wrapper {
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -36,7 +36,7 @@
     @include desktop-up{
         display: none;
     }
-    .hamburger_icon {
+    .burger_icon {
         width: 30px;
         height: 22px;
         -webkit-transform: rotate(0deg);
@@ -67,27 +67,27 @@
     }
 }
 
-.hamburger_wrapper .hamburger_icon span:nth-child(1), .hamburger_wrapper .hamburger_icon span:nth-child(2) {
+.burger_wrapper .burger_icon span:nth-child(1), .burger_wrapper .burger_icon span:nth-child(2) {
     top: 0;
 }
-.hamburger_wrapper .hamburger_icon span:nth-child(2n+1) {
+.burger_wrapper .burger_icon span:nth-child(2n+1) {
     left: 0;
 }
-.hamburger_wrapper .hamburger_icon span:nth-child(3), .hamburger_wrapper .hamburger_icon span:nth-child(4) {
+.burger_wrapper .burger_icon span:nth-child(3), .burger_wrapper .burger_icon span:nth-child(4) {
     top: 9px;
 }
-.hamburger_wrapper .hamburger_icon span:nth-child(2n) {
+.burger_wrapper .burger_icon span:nth-child(2n) {
     left: 50%;
 }
-.hamburger_wrapper .hamburger_icon span:nth-child(5), .hamburger_wrapper .hamburger_icon span:nth-child(6) {
+.burger_wrapper .burger_icon span:nth-child(5), .burger_wrapper .burger_icon span:nth-child(6) {
     top: 18px;
 }
-.hamburger_wrapper .hamburger_icon span:nth-child(6) {
+.burger_wrapper .burger_icon span:nth-child(6) {
     width: 0;
 }
-.hamburger_wrapper .hamburger_icon span:nth-child(2n) {
+.burger_wrapper .burger_icon span:nth-child(2n) {
     left: 50%;
 }
-.hamburger_wrapper:hover .hamburger_icon span:nth-child(6) {
+.burger_wrapper:hover .burger_icon span:nth-child(6) {
     width: 50%;
 }

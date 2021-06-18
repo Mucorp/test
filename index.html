@@ -10,7 +10,7 @@
 </head>
 <body>
     <main class="main-container">
-        <div class="hamburger_wrapper ms-3"><div class="hamburger_icon"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span></div></div>
+        <div class="burger_wrapper ms-3"><div class="burger_icon"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span></div></div>
         <nav class="mobile-nav">
             <div class="logo">
                 <a href=""><img src="./assets/images/Logo.png" alt="" class="img-fluid"></a>
@@ -596,10 +596,14 @@
     $(this).popover("hide");
 });
 
-$('#filter-btn').on('click', function(e) {
-      $('.filter-menu').toggleClass("collapsed"); //you can list several class names 
-      e.preventDefault();
-    });
+    $('#filter-btn').on('click', function(e) {
+        $('.filter-menu').toggleClass("collapsed"); //you can list several class names 
+        e.preventDefault();
+        });
+    $('#burger-btn').on('click', function(e) {
+        $('.filter-menu').toggleClass("collapsed"); //you can list several class names 
+        e.preventDefault();
+        });
 });
     </script>
 </body>
